@@ -2,7 +2,7 @@
 
 
 ## Prerequisites
-1. Install Ruby v2.7.3
+1. Ruby v2.7.3
 
 ## Getting Started
 1. Install Bundler at the command prompt if you haven't yet:
