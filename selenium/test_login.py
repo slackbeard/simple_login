@@ -33,7 +33,7 @@ def test_signup():
 
     signup_button.click()
 
-    assert driver.current_url == f"http://{TEST_HOST}:{TEST_PORT}"
+    assert driver.current_url == f"http://{TEST_HOST}:{TEST_PORT}/"
 
     message = driver.find_element_by_class_name("alert-success")
 
