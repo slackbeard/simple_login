@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-CMD wait-for-it --service web:3000 --timeout 20 -- pytest
+CMD wait-for-it --service web:3000 --timeout 30 -- pytest
