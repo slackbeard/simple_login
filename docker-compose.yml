@@ -1,0 +1,23 @@
+version: "3"
+services:
+  web:
+    build: .
+    ports:
+        # This is for convenience so I can test the page manually
+        - 3000:3000
+    volumes:
+        # Map some of the source paths from the host for development:
+        - ./app:/app/app
+        - ./config:/app/config
+        - ./public:/app/public
+        # Uncomment this to change the test fixture data
+        # - ./selenium/db:/app/db
+  test:
+    build: selenium
+    depends_on:
+      - web
+    environment:
+      - TEST_HOST=web
+      - TEST_PORT=3000
+    volumes:
+      - ./selenium:/app
